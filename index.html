@@ -1,0 +1,274 @@
+<?php
+// Start session for user data
+session_start();
+
+// Set page variables
+$page_title = "Third Cup - Premium Coffee Experience";
+$page_description = "Third Cup Coffee Shop - Experience the best ethically sourced coffee in Bean City. Fresh roasted daily, cozy atmosphere, perfect for work or relaxation.";
+$current_page = "home";
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>" />
+    <title><?php echo htmlspecialchars($page_title); ?></title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <div class="container">
+        <div class="logo" aria-label="Third Cup Coffee Shop">☕ Third Cup</div>
+        <nav class="top-nav" role="navigation" aria-label="Main navigation">
+          <a href="index.php" class="active" aria-current="page">Home</a>
+          <a href="pages/menu.php">Menu</a>
+          <a href="pages/about.php">About</a>
+          <a href="pages/membership.php" class="membership-link">⭐ Rewards</a>
+          <a href="pages/contact.php">Contact</a>
+        </nav>
+        <a href="pages/order.php" class="order-now-btn">Order Now</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="home-hero" aria-labelledby="hero-heading">
+        <div class="hero-background">
+          <div class="hero-image"></div>
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 id="hero-heading">Welcome to <span class="brand-highlight">Third Cup</span></h1>
+            <p class="hero-subtitle">Where every cup tells a story of quality, sustainability, and community</p>
+            <p class="hero-description">Experience the finest ethically sourced coffee, expertly roasted and brewed to perfection in the heart of Bean City.</p>
+            <div class="hero-buttons">
+              <a href="pages/menu.php" class="btn btn-primary hero-btn">
+                <span>📋 Explore Our Menu</span>
+              </a>
+              <a href="pages/order.php" class="btn btn-secondary hero-btn">
+                <span>🛒 Order Online</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-features">
+            <div class="feature-badge">
+              <span class="badge-icon">🌱</span>
+              <span class="badge-text">Ethically Sourced</span>
+            </div>
+            <div class="feature-badge">
+              <span class="badge-icon">☕</span>
+              <span class="badge-text">Fresh Roasted Daily</span>
+            </div>
+            <div class="feature-badge">
+              <span class="badge-icon">🏆</span>
+              <span class="badge-text">Award Winning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Features Section -->
+        <section class="home-features">
+          <div class="features-header">
+            <h2>Why Choose Third Cup?</h2>
+            <p>Discover what makes us Bean City's favorite coffee destination</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">☕</div>
+              <h3>Premium Quality</h3>
+              <p>Hand-selected beans from the world's finest coffee regions, roasted to perfection by our expert team.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌍</div>
+              <h3>Sustainable Sourcing</h3>
+              <p>We work directly with farmers to ensure fair trade practices and environmental sustainability.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <h3>Expert Craftsmanship</h3>
+              <p>Our skilled baristas create beautiful latte art and perfect flavor profiles in every cup.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏠</div>
+              <h3>Cozy Atmosphere</h3>
+              <p>A warm, welcoming space perfect for work, study, or catching up with friends over great coffee.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Popular Items Section -->
+        <section class="home-popular">
+          <div class="popular-header">
+            <h2>Customer Favorites</h2>
+            <p>Try our most loved drinks and pastries</p>
+          </div>
+          <div class="popular-grid">
+            <div class="popular-item">
+              <div class="item-image">
+                <img src="images/latte.jpeg" alt="Signature Latte with latte art" />
+              </div>
+              <div class="item-info">
+                <h3>Signature Latte</h3>
+                <p>Our house blend with perfectly steamed milk and beautiful latte art</p>
+                <div class="item-price">₱200</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="item-image">
+                <img src="images/croissant.jpeg" alt="Freshly baked croissant" />
+              </div>
+              <div class="item-info">
+                <h3>Fresh Croissant</h3>
+                <p>Buttery, flaky French pastry baked fresh every morning</p>
+                <div class="item-price">₱120</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="item-image">
+                <img src="images/coldbrew.jpeg" alt="Iced cold brew coffee" />
+              </div>
+              <div class="item-info">
+                <h3>Cold Brew</h3>
+                <p>Smooth, refreshing coffee brewed slowly over 12 hours</p>
+                <div class="item-price">₱210</div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-cta">
+            <a href="pages/menu.php" class="btn btn-outline">
+              <span>📋 View Full Menu</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="home-testimonials">
+          <div class="testimonials-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from our coffee-loving community</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"The best coffee in Bean City! The atmosphere is perfect for working, and the baristas really know their craft."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👩‍💼</div>
+                <div class="author-info">
+                  <div class="author-name">Sarah Johnson</div>
+                  <div class="author-title">Regular Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"Love the sustainable approach and the quality is outstanding. My morning latte is always perfect!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👨‍💻</div>
+                <div class="author-info">
+                  <div class="author-name">Mike Chen</div>
+                  <div class="author-title">Coffee Enthusiast</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"Third Cup has become my second home. Great coffee, friendly staff, and the perfect place to meet friends."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👩‍🎨</div>
+                <div class="author-info">
+                  <div class="author-name">Emma Rodriguez</div>
+                  <div class="author-title">Local Artist</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="home-cta">
+          <div class="cta-card">
+            <div class="cta-content">
+              <h2>Ready for Your Perfect Cup?</h2>
+              <p>Join thousands of satisfied customers who start their day with Third Cup</p>
+              <div class="cta-stats">
+                <div class="cta-stat">
+                  <span class="stat-number">5000+</span>
+                  <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="cta-stat">
+                  <span class="stat-number">15</span>
+                  <span class="stat-label">Coffee Varieties</span>
+                </div>
+                <div class="cta-stat">
+                  <span class="stat-number">6</span>
+                  <span class="stat-label">Years of Excellence</span>
+                </div>
+              </div>
+              <div class="cta-buttons">
+                <a href="pages/order.php" class="btn btn-primary">
+                  <span>🛒 Order Now</span>
+                </a>
+                <a href="pages/contact.php" class="btn btn-secondary">
+                  <span>📍 Visit Our Shop</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Streamlined Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <!-- Brand Section -->
+        <div class="footer-brand">
+          <a href="index.php" class="footer-logo">
+            ☕ Third Cup
+          </a>
+          <p class="footer-description">
+            Your perfect cup awaits at Third Cup Coffee Shop.
+          </p>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-section">
+          <h4>Stay Updated</h4>
+          <div class="footer-newsletter">
+            <div class="newsletter-title">☕ Coffee Newsletter</div>
+            <p class="newsletter-description">
+              Get the latest updates, special offers, and coffee tips delivered to your inbox.
+            </p>
+            <form class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Your email address" required>
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="footer-copyright">
+            &copy; 2024 Third Cup Coffee Shop. All rights reserved.
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <button class="language-toggle-footer" onclick="toggleLanguage()">🌐 Language</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/api-client.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/membership-form.js"></script>
+  </body>
+</html>
+
